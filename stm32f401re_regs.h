@@ -3,6 +3,7 @@
 #define STM32F401_H
 
 #include <stdint.h>
+#include "cortex_m4.h"
 
 typedef struct {
     volatile uint32_t CSR         ; // 0x00 ADC Common status register
