@@ -641,11 +641,8 @@ typedef struct {
 #define GPIOB   ((GPIO_TypeDef *) 0x40020400UL)
 #define GPIOH   ((GPIO_TypeDef *) 0x40021C00UL)
 
-GPIO_TypeDef * const GpioPorts[] = {
-    GPIOA,
-    GPIOB,
-    GPIOH
-};
+
+extern GPIO_TypeDef * const GpioPorts[];
 
 typedef struct {
     volatile uint32_t CR1         ; // 0x00 Control register 1

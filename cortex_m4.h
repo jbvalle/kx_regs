@@ -12,6 +12,13 @@ typedef struct {
     volatile uint32_t STK_CALIB   ; // 0x0C SysTick calibration value register
 } SYSTICK_TypeDef;
 
-#define SYSTICK   ((SYSTICK_TypeDef *) 0xE000E010UL)
+#define SYSTICK   ((SYSTICK_TypeDef * const) 0xE000E010UL)
+
+#define STK_CTRL_BIT_POS_ENABLE 0
+#define STK_CTRL_BIT_POS_TICKINT 1
+#define STK_CTRL_BIT_POS_CLKSRC 2
+#define STK_CTRL_BIT_POS_CNTFLAG 16
+
+#define AHB_FRQ_Hz 16000000
 
 #endif /* CORTEX_M4 */
