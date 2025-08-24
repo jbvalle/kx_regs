@@ -310,39 +310,13 @@ typedef struct {
     volatile uint32_t LCKR        ; // 0x1C GPIO port configuration lock register
     volatile uint32_t AFRL        ; // 0x20 GPIO alternate function low register
     volatile uint32_t AFRH        ; // 0x24 GPIO alternate function high register
-} GPIOK_TypeDef;
+} GPIO_TypeDef;
 
-#define GPIOK   ((GPIOK_TypeDef *) 0x40022800UL)
+#define GPIOK   ((GPIO_TypeDef *) 0x40022800UL)
+#define GPIOB   ((GPIO_TypeDef *) 0x40020400UL)
+#define GPIOA   ((GPIO_TypeDef *) 0x40020000UL)
 
-typedef struct {
-    volatile uint32_t MODER       ; // 0x00 GPIO port mode register
-    volatile uint32_t OTYPER      ; // 0x04 GPIO port output type register
-    volatile uint32_t OSPEEDR     ; // 0x08 GPIO port output speed register
-    volatile uint32_t PUPDR       ; // 0x0C GPIO port pull-up/pull-down register
-    volatile uint32_t IDR         ; // 0x10 GPIO port input data register
-    volatile uint32_t ODR         ; // 0x14 GPIO port output data register
-    volatile uint32_t BSRR        ; // 0x18 GPIO port bit set/reset register
-    volatile uint32_t LCKR        ; // 0x1C GPIO port configuration lock register
-    volatile uint32_t AFRL        ; // 0x20 GPIO alternate function low register
-    volatile uint32_t AFRH        ; // 0x24 GPIO alternate function high register
-} GPIOB_TypeDef;
-
-#define GPIOB   ((GPIOB_TypeDef *) 0x40020400UL)
-
-typedef struct {
-    volatile uint32_t MODER       ; // 0x00 GPIO port mode register
-    volatile uint32_t OTYPER      ; // 0x04 GPIO port output type register
-    volatile uint32_t OSPEEDR     ; // 0x08 GPIO port output speed register
-    volatile uint32_t PUPDR       ; // 0x0C GPIO port pull-up/pull-down register
-    volatile uint32_t IDR         ; // 0x10 GPIO port input data register
-    volatile uint32_t ODR         ; // 0x14 GPIO port output data register
-    volatile uint32_t BSRR        ; // 0x18 GPIO port bit set/reset register
-    volatile uint32_t LCKR        ; // 0x1C GPIO port configuration lock register
-    volatile uint32_t AFRL        ; // 0x20 GPIO alternate function low register
-    volatile uint32_t AFRH        ; // 0x24 GPIO alternate function high register
-} GPIOA_TypeDef;
-
-#define GPIOA   ((GPIOA_TypeDef *) 0x40020000UL)
+extern GPIO_TypeDef * const GpioPorts[];
 
 typedef struct {
     volatile uint32_t MEMRM       ; // 0x00 memory remap register
