@@ -21,4 +21,6 @@ typedef struct {
 
 #define AHB_FRQ_Hz 16000000
 
+void global_enable_IRQ(void);
+void global_disable_IRQ(void);
 #endif /* CORTEX_M4 */
