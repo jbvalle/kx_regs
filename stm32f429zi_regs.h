@@ -3,6 +3,7 @@
 #define STM32F429_H
 
 #include <stdint.h>
+#include "cortex_m4.h"
 
 typedef struct {
     volatile uint32_t CR          ; // 0x00 control register
