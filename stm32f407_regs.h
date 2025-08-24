@@ -189,9 +189,17 @@ typedef struct {
     volatile uint32_t AFRH        ; // 0x24 GPIO alternate function high register
 } GPIO_TypeDef;
 
-#define GPIOI   ((GPIO_TypeDef *) 0x40022000UL)
-#define GPIOB   ((GPIO_TypeDef *) 0x40020400UL)
 #define GPIOA   ((GPIO_TypeDef *) 0x40020000UL)
+#define GPIOB   ((GPIO_TypeDef *) 0x40020400UL)
+#define GPIOC   ((GPIO_TypeDef *) 0x40020800UL)
+#define GPIOD   ((GPIO_TypeDef *) 0x40020C00UL)
+#define GPIOE   ((GPIO_TypeDef *) 0x40021000UL)
+#define GPIOF   ((GPIO_TypeDef *) 0x40021400UL)
+#define GPIOG   ((GPIO_TypeDef *) 0x40021800UL)
+#define GPIOH   ((GPIO_TypeDef *) 0x40021C00UL)
+#define GPIOI   ((GPIO_TypeDef *) 0x40022000UL)
+#define GPIOJ   ((GPIO_TypeDef *) 0x40022400UL)
+#define GPIOK   ((GPIO_TypeDef *) 0x40022800UL)
 
 extern GPIO_TypeDef * const GpioPorts[];
 
